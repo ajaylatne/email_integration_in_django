@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <style>
+        div{
+            border: 10px solid gray;
+            border-radius: 10px;
+            padding: 10px;
+            width: 300px;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+                <div>
+                    <form method="post">
+                        {% csrf_token %}
+                        <label>Enter your mail here:</label>
+                        <input type="email" name="mail">
+                        <br><br>
+
+                        <label>Enter your name here:</label>
+                        <input name="name">
+                        <br><br>
+
+                        <input type="submit" value="send mail">
+                    </form>
+                </div>
+</body>
+</html>
